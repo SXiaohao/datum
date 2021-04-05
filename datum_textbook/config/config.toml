@@ -1,0 +1,28 @@
+[etcd]
+    serviceName="datum_common"
+#    addr="192.168.8.147:2379"
+#    addr = "117.50.1.28:2379"
+addr = "127.0.0.1:2379"
+[database]
+    type="mysql"
+#    local="root:111111@(10.100.162.234:3306)/datum_textbook?charset=utf8&parseTime=True&loc=Local"
+    local="root:111111@(139.9.139.79:30139)/datum_textbook?charset=utf8&parseTime=True&loc=Local"
+[log]
+    logFilePath="./log"
+    logFileName="datumTextbook.log"
+[redis]
+#   addr="10.96.107.165:6379"
+    addr="139.9.139.79:30745"
+    password=""
+[datum]
+    [datum.keywordList]
+        1="源哥"
+        2="马保国"
+        3="高等数学（第七版）"
+        4="人类简史 从动物到上帝"
+        5="海错图笔记"
+        6="死者在说话"
+        7="拥抱你的内在小孩"
+        8="然而，很美：爵士乐之书"
+        9="雷蒙德·卡佛短篇小说自选集"
+        10="百年孤独"

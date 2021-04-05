@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message GetQrcodeRequest{
+  string content = 1;
+}
+
+message GetQrcodeResponse{
+  string msg = 1;
+  string path = 2;
+}
+
+
+service Qrcode{
+  rpc GetQrcode(GetQrcodeRequest) returns (GetQrcodeResponse){}
+
+}

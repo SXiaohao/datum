@@ -1,0 +1,23 @@
+[etcd]
+#    addr="192.168.8.147:2379"
+#     addr = "117.50.1.28:2379"
+    addr = "127.0.0.1:2379"
+[upYun]
+    addr = "https://cdn.ymkj8.com"
+    bucket = "ym-file"
+    operator = "ymrw"
+    password = "oWTc9FeFuoAVaSkL9FXBoTjcHdQYU0kx"
+    [upYun.check]
+        key = "Vfl7maYTT3iZVaDDfbpoewnrf9zEkLNp"
+        secret = "pd2yz10g5gyw666N7cFjI5zCpgLoVfbu"
+        host = "banma.api.upyun.com"
+        check_picture_url = "/image/bin/check?act=porn&act=political"
+        check_text_url = "/text/check?act=spam"
+        method = "POST"
+[sms]
+    secret_id ="AKID5vUpujWYWw72iAmM4E3aqqa4HFDurTKv"#腾讯云短信api
+    secret_key="lpc1A4xbAWmosfAPQBfsordARRqzrTot"
+    app_id = "1400431393"#腾讯云应用
+    app_key = "663badc51ecd18a52adb10cce2417bcd"
+[jwt]
+    secret = "iAmM4EAKID3aqqa45vUpujWYWw72HFDurTKv"

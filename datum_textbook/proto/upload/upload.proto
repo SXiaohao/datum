@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+message UploadPictureRequest{
+  string fileName = 1;
+  string fileType = 2;
+  int64 Size = 3;
+  bytes content = 4;
+  string uploadPath = 5;
+}
+
+message UploadPictureResponse{
+  string msg = 1;
+  string path = 2;
+  int64  statusCode = 3;
+}
+
+message UploadFileRequest{
+  string fileName = 1;
+  string fileType = 2;
+  int64 Size = 3;
+  bytes content = 4;
+}
+
+message UploadFileResponse{
+  string msg = 1;
+  string path = 2;
+  int64  statusCode = 3;
+}
+
+message CheckTextRequest{
+  string text = 1;
+}
+
+message CheckTextResponse{
+  string msg = 1;
+  int64  statusCode = 2;
+}
+
+service Upload{
+  rpc GetPicturePath(UploadPictureRequest) returns (UploadPictureResponse){}
+  rpc GetFilePath(UploadFileRequest) returns (UploadFileResponse){}
+  rpc CheckText(CheckTextRequest) returns (CheckTextResponse){}
+}

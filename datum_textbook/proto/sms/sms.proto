@@ -1,0 +1,25 @@
+syntax = "proto3";
+package proto;
+
+message SendRegisterCodeRequest{
+    string code = 1;
+    string phoneNumber = 2;
+}
+
+message SendRegisterCodeResponse{
+  string message = 1;
+}
+
+message SendRestPwdCodeRequest{
+  string code = 1;
+  string phoneNumber = 2;
+}
+
+message SendRestPwdCodeResponse{
+  string message = 1;
+}
+
+service SmsService{
+  rpc SendRegisterCode(SendRegisterCodeRequest) returns(SendRegisterCodeResponse);
+  rpc SendRestPwdCode(SendRestPwdCodeRequest) returns(SendRestPwdCodeResponse);
+}
